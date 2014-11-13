@@ -1,0 +1,21 @@
+{
+  "name": "gulp-toor",
+  "version": "0.1.0",
+  "description": "gulp plugin to package all require.js files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "requirejs",
+    "rjs"
+  ],
+  "author": "TooBug",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.1",
+    "requirejs": "^2.1.15",
+    "through2": "^0.6.3"
+  }
+}
