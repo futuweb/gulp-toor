@@ -11,8 +11,12 @@ Gulp插件，使用r.js（require.js）打包目录下所有require.js文件。
 
 ```javascript
 gulp.task('test',function(){
-	gulp.src(['myapp/*.js']).pipe(toor({
-		baseUrl:'myapp',
+	gulp.src(['myapp/**/*.js'],{
+		base:'myapp' //设定相对目录，在输出时myapp之后的路径会保留
+	}).pipe(toor({
+		baseUrl:'myapp',	//require.js模块根目录
+
+		//一些require.js配置，比如package/paths/shim等
 		packages:[{
 			name: 'echarts',
 			location: 'lib/echarts',      
@@ -33,8 +37,10 @@ gulp.task('test',function(){
 				exports: 'jQuery'
 			}
 		},
-		exclude:['jquery'],
-		out:"web/scripts-build"
-	})).pipe(gulp.dest('web/scripts-build'));
+		exclude:['jquery']
+	})).pipe(gulp.dest('myapp-build'))	//输出目录，后面会接上源文件myapp之后的路径
+		.on('error',function(err){
+		console.log(err);	//输出错误（gulp插件会触发错误事件，但不会输出，需要手工处理）
+	})
 });
 ```
