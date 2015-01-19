@@ -16,7 +16,7 @@ gulp.task('test',function(){
 	}).pipe(toor({
 		baseUrl:'myapp',	//require.js模块根目录
 
-		//一些require.js配置，比如package/paths/shim等
+		//一些require.js配置，比如packages/paths/shim等
 		packages:[{
 			name: 'echarts',
 			location: 'lib/echarts',      
