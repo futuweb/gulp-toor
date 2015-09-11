@@ -18,6 +18,7 @@ module.exports = function (options) {
 		}
 		var self = this;
 		options.name = path.join(path.dirname(path.relative(options.baseUrl,file.path)),path.basename(file.path,'.js'));
+		options.name = options.name.replace(/\\/g,'/');
 		options.out = function(text,sourceMapText){
 			file.contents = new Buffer(text);
 			// todo:sourcemap
