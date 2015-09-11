@@ -11,6 +11,10 @@
     "requirejs",
     "rjs"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooBug/gulp-toor"
+  },
   "author": "TooBug",
   "license": "MIT",
   "dependencies": {
