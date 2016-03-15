@@ -60,6 +60,10 @@ gulp.task('test',function(){
 
 ## 版本
 
+### 0.2.2 （2016-03-15）
+
+- 出错时直接使用`console.log`打印错误
+
 ### 0.2.1 （2015-09-21）
 
 - 修正package.json中madge依赖声明（非稳定特性）

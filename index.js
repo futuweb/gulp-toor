@@ -143,6 +143,7 @@ module.exports = function (options) {
 			self.push(file);
 			cb(null,file);
 		}, function(err) {
+			console.log(err);
 			self.emit('error', new gutil.PluginError('toor', err, {showStack: true}));
 			cb(null,file);
 		});
